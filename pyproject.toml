@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "keras-vggface"
+version = "0.6.0"
+description = ""
+
+[tool.poetry.dependencies]
+python = "^3.9"
+tensorflow = "~2.5.0"
+Keras-Applications = "^1.0.8"
+pydot = "^1.4.2"
+Pillow = "^9.4.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

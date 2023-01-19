@@ -1,8 +1,8 @@
 import numpy as np
 from keras_vggface import VGGFace
-from keras.preprocessing import image
+from tensorflow.keras.preprocessing import image
 from keras_vggface import utils
-import keras
+import tensorflow.keras as keras
 import unittest
 
 
@@ -11,6 +11,7 @@ class VGGFaceTests(unittest.TestCase):
     def testVGG16(self):
         keras.backend.image_data_format()
         model = VGGFace(model='vgg16')
+        assert model
         img = image.load_img('image/ajb.jpg', target_size=(224, 224))
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
@@ -25,6 +26,7 @@ class VGGFaceTests(unittest.TestCase):
     def testRESNET50(self):
         keras.backend.image_data_format()
         model = VGGFace(model='resnet50')
+        assert model
         img = image.load_img('image/ajb.jpg', target_size=(224, 224))
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
@@ -39,6 +41,7 @@ class VGGFaceTests(unittest.TestCase):
     def testSENET50(self):
         keras.backend.image_data_format()
         model = VGGFace(model='senet50')
+        assert model
         img = image.load_img('image/ajb.jpg', target_size=(224, 224))
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
