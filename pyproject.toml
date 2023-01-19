@@ -1,7 +1,8 @@
 [tool.poetry]
 name = "keras-vggface"
 version = "0.6.0"
-description = ""
+description = 'VGGFace implementation with Keras framework'
+authors = ["Refik Can MALLI <mallir@itu.edu.tr>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
